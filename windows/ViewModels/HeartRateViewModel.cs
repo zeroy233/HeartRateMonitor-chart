@@ -23,6 +23,9 @@ namespace HeartRate.ViewModels
         private string? _lanDeviceName;
         private string? _lanAddress;
 
+        /// <summary>实时心率曲线数据（最近 60 秒）；断开/清空心率时自动重置。</summary>
+        public HeartRateChartTracker Chart { get; } = new();
+
         /// <summary>当前选中的设备，由 MainViewModel 注入。</summary>
         public Func<BleDeviceInfo?> GetSelectedDevice { get; set; } = () => null;
 
@@ -204,6 +207,12 @@ namespace HeartRate.ViewModels
         {
             OnPropertyChanged(nameof(HeartRateText));
             OnPropertyChanged(nameof(HasHeartRate));
+            // 心率被清空 = 断开/切换数据源：曲线重置，历史会话结束并保存
+            if (value is null)
+            {
+                Chart.Clear();
+                HistoryService.Instance.EndSession();
+            }
         }
 
         partial void OnIsFloatWindowVisibleChanged(bool value)
@@ -375,6 +384,8 @@ namespace HeartRate.ViewModels
                 if (!IsConnected && !IsLanConnected) return;
                 StatusTextFallback = null;
                 HeartRate = bpm;
+                Chart.Add(bpm);
+                HistoryService.Instance.Record(bpm, ConnectedDeviceName, ConnectionModeText);
                 OnPropertyChanged(nameof(StatusText));
             });
         }
@@ -512,6 +523,7 @@ namespace HeartRate.ViewModels
             _service.HeartRateReceived -= OnHeartRateReceived;
             _service.ConnectionChanged -= OnConnectionChanged;
             _service.DeviceUpdated -= OnServiceDeviceUpdated;
+            HistoryService.Instance.EndSession();
         }
     }
 }

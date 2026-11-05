@@ -196,6 +196,7 @@ public sealed partial class MainWindow : Window
     {
         var tag = (args.SelectedItem as NavigationViewItem)?.Tag as string;
         HomeContent.Visibility = tag == "home" ? Visibility.Visible : Visibility.Collapsed;
+        HistoryContent.Visibility = tag == "history" ? Visibility.Visible : Visibility.Collapsed;
         AppSettingsContent.Visibility = tag == "appSettings" ? Visibility.Visible : Visibility.Collapsed;
         FloatSettingsContent.Visibility = tag == "floatSettings" ? Visibility.Visible : Visibility.Collapsed;
         NetworkContent.Visibility = tag == "network" ? Visibility.Visible : Visibility.Collapsed;

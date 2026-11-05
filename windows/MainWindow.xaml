@@ -63,6 +63,12 @@
                             <FontIcon Glyph="&#xE80F;" />
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
+                    <NavigationViewItem x:Uid="MainWindow_NavHistory"
+                                        Tag="history">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE81C;" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
                     <NavigationViewItem x:Uid="MainWindow_NavAppSettings"
                                         Tag="appSettings">
                         <NavigationViewItem.Icon>
@@ -115,6 +121,10 @@
                         <views:HeartRateControl Grid.Column="1"
                                             ViewModel="{x:Bind ViewModel.HeartRate, Mode=OneTime}" />
                     </Grid>
+
+                    <views:HistoryControl x:Name="HistoryContent"
+                                          Visibility="Collapsed"
+                                          ViewModel="{x:Bind ViewModel.History, Mode=OneTime}" />
 
                     <views:AppSettingsControl x:Name="AppSettingsContent"
                                               Visibility="Collapsed"

@@ -144,6 +144,12 @@
   <data name="HeartRate_Bpm" xml:space="preserve">
     <value>bpm</value>
   </data>
+  <data name="HeartRate_Statistics.Text" xml:space="preserve">
+    <value>Heart Rate Statistics</value>
+  </data>
+  <data name="HeartRateChart_Empty.Text" xml:space="preserve">
+    <value>Waiting for heart rate data…</value>
+  </data>
   <data name="HeartRate_BluetoothBlockedTitle" xml:space="preserve">
     <value>Cannot connect</value>
   </data>
@@ -161,6 +167,72 @@
   </data>
   <data name="MainWindow_NavHome.Content" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="MainWindow_NavHistory.Content" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="History_Title.Text" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="History_NowLabel.Text" xml:space="preserve">
+    <value>Beijing time</value>
+  </data>
+  <data name="History_Avg.Text" xml:space="preserve">
+    <value>Average</value>
+  </data>
+  <data name="History_Max.Text" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="History_Min.Text" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="History_Duration.Text" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="History_Records.Text" xml:space="preserve">
+    <value>Records</value>
+  </data>
+  <data name="History_SampleCount.Text" xml:space="preserve">
+    <value>Samples</value>
+  </data>
+  <data name="History_Range.Text" xml:space="preserve">
+    <value>Time range (Beijing time)</value>
+  </data>
+  <data name="History_Live.Text" xml:space="preserve">
+    <value>Live</value>
+  </data>
+  <data name="History_Empty.Text" xml:space="preserve">
+    <value>No history yet. Sessions are recorded automatically once a heart rate device is connected.</value>
+  </data>
+  <data name="History_SelectHint.Text" xml:space="preserve">
+    <value>Select a record on the left to see details</value>
+  </data>
+  <data name="History_DeleteSelected.Content" xml:space="preserve">
+    <value>Delete selected</value>
+  </data>
+  <data name="History_ClearAll.Content" xml:space="preserve">
+    <value>Clear all</value>
+  </data>
+  <data name="History_ClearHint.Text" xml:space="preserve">
+    <value>This deletes every finished history record and cannot be undone.</value>
+  </data>
+  <data name="History_ClearConfirm.Content" xml:space="preserve">
+    <value>Confirm clear</value>
+  </data>
+  <data name="History_UnknownDevice" xml:space="preserve">
+    <value>Unknown device</value>
+  </data>
+  <data name="History_InProgress" xml:space="preserve">
+    <value>Live</value>
+  </data>
+  <data name="History_StatsFormat" xml:space="preserve">
+    <value>Avg {0} · Min {1} · Max {2} · {3} samples</value>
+  </data>
+  <data name="History_TodayTitle" xml:space="preserve">
+    <value>Today · Beijing time {0}</value>
+  </data>
+  <data name="History_CountFormat" xml:space="preserve">
+    <value>{0} sessions / {1} samples</value>
   </data>
   <data name="MainWindow_NavAppSettings.Content" xml:space="preserve">
     <value>App Settings</value>

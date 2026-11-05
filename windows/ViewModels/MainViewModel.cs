@@ -19,6 +19,7 @@ namespace HeartRate.ViewModels
         public AppearanceSettingsViewModel Appearance { get; }
         public LanTransferViewModel LanTransfer { get; }
         public AppSettingsViewModel AppSettings { get; }
+        public HistoryViewModel History { get; }
 
         public MainViewModel(HeartRateService service)
         {
@@ -31,6 +32,7 @@ namespace HeartRate.ViewModels
             _heartRateService = service;
             DeviceList = new DeviceListViewModel(service, uiDispatcher);
             HeartRate = new HeartRateViewModel(service, uiDispatcher);
+            History = new HistoryViewModel(uiDispatcher);
             FloatSettings = new FloatWindowSettingsViewModel();
 
             // 网络传输：HTTP/WebSocket 服务 + Webhook，按设置自动启停

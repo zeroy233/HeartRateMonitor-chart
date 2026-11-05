@@ -5,6 +5,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="using:HeartRate.Views"
              mc:Ignorable="d"
              d:DesignWidth="500"
              d:DesignHeight="600">
@@ -65,6 +66,24 @@
                                    FontWeight="Medium"
                                    Foreground="{ThemeResource TextFillColorSecondaryBrush}"
                                    VerticalAlignment="Center" />
+                    </StackPanel>
+
+                    <!-- 心率统计曲线（对应手机端“心率统计”卡片） -->
+                    <StackPanel Orientation="Vertical"
+                                Spacing="8">
+                        <StackPanel Orientation="Horizontal"
+                                    Spacing="8">
+                            <FontIcon Glyph="&#xEB51;"
+                                      FontSize="16"
+                                      Foreground="#F44336"
+                                      VerticalAlignment="Center" />
+                            <TextBlock x:Uid="HeartRate_Statistics"
+                                       Text="心率统计"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       VerticalAlignment="Center" />
+                        </StackPanel>
+                        <local:HeartRateChartControl Tracker="{x:Bind ViewModel.Chart, Mode=OneTime}" />
                     </StackPanel>
 
                     <!-- 设备信息表 -->

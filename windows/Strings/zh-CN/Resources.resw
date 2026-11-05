@@ -144,6 +144,12 @@
   <data name="HeartRate_Bpm" xml:space="preserve">
     <value>bpm</value>
   </data>
+  <data name="HeartRate_Statistics.Text" xml:space="preserve">
+    <value>心率统计</value>
+  </data>
+  <data name="HeartRateChart_Empty.Text" xml:space="preserve">
+    <value>等待心率数据…</value>
+  </data>
   <data name="HeartRate_BluetoothBlockedTitle" xml:space="preserve">
     <value>无法连接</value>
   </data>
@@ -161,6 +167,72 @@
   </data>
   <data name="MainWindow_NavHome.Content" xml:space="preserve">
     <value>首页</value>
+  </data>
+  <data name="MainWindow_NavHistory.Content" xml:space="preserve">
+    <value>历史记录</value>
+  </data>
+  <data name="History_Title.Text" xml:space="preserve">
+    <value>历史记录</value>
+  </data>
+  <data name="History_NowLabel.Text" xml:space="preserve">
+    <value>北京时间</value>
+  </data>
+  <data name="History_Avg.Text" xml:space="preserve">
+    <value>平均</value>
+  </data>
+  <data name="History_Max.Text" xml:space="preserve">
+    <value>最高</value>
+  </data>
+  <data name="History_Min.Text" xml:space="preserve">
+    <value>最低</value>
+  </data>
+  <data name="History_Duration.Text" xml:space="preserve">
+    <value>时长</value>
+  </data>
+  <data name="History_Records.Text" xml:space="preserve">
+    <value>记录</value>
+  </data>
+  <data name="History_SampleCount.Text" xml:space="preserve">
+    <value>采样数</value>
+  </data>
+  <data name="History_Range.Text" xml:space="preserve">
+    <value>时间段（北京时间）</value>
+  </data>
+  <data name="History_Live.Text" xml:space="preserve">
+    <value>进行中</value>
+  </data>
+  <data name="History_Empty.Text" xml:space="preserve">
+    <value>暂无历史记录。连接心率设备后会自动记录。</value>
+  </data>
+  <data name="History_SelectHint.Text" xml:space="preserve">
+    <value>选择左侧一条记录查看详情</value>
+  </data>
+  <data name="History_DeleteSelected.Content" xml:space="preserve">
+    <value>删除所选</value>
+  </data>
+  <data name="History_ClearAll.Content" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="History_ClearHint.Text" xml:space="preserve">
+    <value>将删除全部已结束的历史记录，无法恢复。</value>
+  </data>
+  <data name="History_ClearConfirm.Content" xml:space="preserve">
+    <value>确认清空</value>
+  </data>
+  <data name="History_UnknownDevice" xml:space="preserve">
+    <value>未知设备</value>
+  </data>
+  <data name="History_InProgress" xml:space="preserve">
+    <value>进行中</value>
+  </data>
+  <data name="History_StatsFormat" xml:space="preserve">
+    <value>平均 {0} · 最低 {1} · 最高 {2} · {3} 条</value>
+  </data>
+  <data name="History_TodayTitle" xml:space="preserve">
+    <value>今日统计 · 北京时间 {0}</value>
+  </data>
+  <data name="History_CountFormat" xml:space="preserve">
+    <value>{0} 次 / {1} 条</value>
   </data>
   <data name="MainWindow_NavAppSettings.Content" xml:space="preserve">
     <value>应用设置</value>
